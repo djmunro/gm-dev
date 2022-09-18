@@ -1,0 +1,6 @@
+[submodule "gm-other"]
+	path = gm-other
+	url = git@github.com:djmunro/gm-other.git
+[submodule "gm-base"]
+	path = gm-base
+	url = git@github.com:djmunro/gm-base.git
