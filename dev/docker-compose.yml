@@ -1,10 +1,19 @@
 version: "3.7"
 services:
-  gmbx-gm-dev:
-    build:
-      context: ../
-      dockerfile: dev/Dockerfile
-    container_name: gmbx-gm-dev
-    restart: always
-    volumes:
-      - "../:/usr/src/app"
+    aem-author:
+        build:
+            context: ../
+            dockerfile: aem-author/Dockerfile
+        ports:
+            - 4502:4502
+        restart: unless-stopped
+        volumes:
+            - ../aem-author/license.properties:/usr/src/app/license.properties:ro
+    gmbx-gm-dev:
+        build:
+            context: ../
+            dockerfile: dev/Dockerfile
+        container_name: gmbx-gm-dev
+        restart: unless-stopped
+        volumes:
+            - ../:/usr/src/app
