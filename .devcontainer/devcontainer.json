@@ -1,0 +1,9 @@
+{
+  "name": "GMBX_GM development container",
+  "service": "gmbx-gm-dev",
+  "dockerComposeFile": ["docker-compose.yml", "../dev/docker-compose.yml"],
+  "workspaceFolder": "/usr/src/app",
+  "postCreateCommand": "./bin/post-install.sh",
+  "settings": {},
+  "extensions": []
+}

@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  gmbx-gm-dev:
+    build:
+      context: ../
+      dockerfile: dev/Dockerfile
+    container_name: gmbx-gm-dev
+    restart: always
+    volumes:
+      - "../:/usr/src/app"
